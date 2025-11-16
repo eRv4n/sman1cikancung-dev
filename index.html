@@ -17,67 +17,85 @@
     <!-- end font -->
     <!-- cdn -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <!-- end cdn -->
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar-top">
+    <header class="navbar-top">
       <div class="navbar-top-wrapper">
-        <div class="logo">
-          <img src="images/tittle-smancik.png" alt="tittle-smancik" />
-          <h1>
-            SMA NEGERI 1 CIKANCUNG
+        <a href="/" class="logo">
+          <img src="images/tittle-smancik.png" alt="Logo SMA Negeri 1 Cikancung" />
+          <div class="school-name">
+            <h1>SMA NEGERI 1 CIKANCUNG</h1>
             <p>OPTIMIS PASTI BISA</p>
-          </h1>
-        </div>
-        <div class="media-sosial">
-          <span>
-            <a href="https://www.facebook.com/Smanckc1/?locale=id_ID">
-              <i class="ri-facebook-fill"></i>
-            </a>
-          </span>
-          <span>
-            <a href="https://www.tiktok.com/@sman1cikancung">
-              <i class="ri-tiktok-fill"></i>
-            </a>
-          </span>
-          <span>
-            <a href="https://www.instagram.com/sman.cikancung/">
-              <i class="ri-instagram-line"></i>
-            </a>
-          </span>
-          <span>
-            <a href="https://www.youtube.com/@SMAN1Cikancung">
-              <i class="ri-youtube-fill"></i>
-            </a>
-          </span>
-        </div>
-      </div>
-    </nav>
-    <nav class="navbar-bottom">
-      <ul>
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">Tentang Sekolah</a></li>
-        <li><a href="#">SPMB 2026</a></li>
-        <li class="kesiswaan">
-          <a href="#" onclick="dropdownKesiswaan()">Kesiswaan <i class="ri-arrow-drop-down-fill"></i></a>
-          <div class="contentKesiswaan">
-            <span><a href="#">OSIS</a></span>
-            <span><a href="#">MPK</a></span>
-            <span><a href="#">Extrakurikuler</a></span>
           </div>
-        </li>
-        <li><a href="#">Berita</a></li>
-        <li><a href="#">Kontak</a></li>
-        <li><a href="https://simt.kemdikbud.go.id/detail-prestasi-sekolah?npsn=20227904">Puspresnas</a></li>
-      </ul>
+        </a>
+
+        <nav class="media-sosial">
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/Smanckc1/?locale=id_ID">
+                <i class="ri-facebook-fill"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/@sman1cikancung">
+                <i class="ri-tiktok-fill"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/sman.cikancung/">
+                <i class="ri-instagram-line"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/@SMAN1Cikancung">
+                <i class="ri-youtube-fill"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Navbar bottom -->
+    <nav class="navbar-bottom">
+      <div class="navbar-bottom-wrapper">
+        <ul class="big-screen">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Tentang Sekolah</a></li>
+          <li><a href="#">SPMB 2026</a></li>
+          <li class="kesiswaan">
+            <button popovertarget="popUpKesiswaan" class="btn btnUpKesiswaan">
+              Kesiswaan <i class="ri-arrow-drop-down-fill"></i>
+            </button>
+            <div id="popUpKesiswaan" class="kesiswaan-btn" popover>
+              <a href="#">OSIS</a>
+              <a href="#">MPK</a>
+              <a href="#">Extrakurikuler</a>
+            </div>
+          </li>
+          <li><a href="#">Berita</a></li>
+          <li><a href="#">Kontak</a></li>
+          <li><a href="https://simt.kemdikbud.go.id/detail-prestasi-sekolah?npsn=20227904">Puspresnas</a></li>
+        </ul>
+        <button class="btn hamburger" onclick="sideBarToogler()">
+          <span class="material-symbols-outlined"> menu </span>
+        </button>
+      </div>
+      <div class="small-screen">
+        <button class="btn close-burger" onclick="sideBarToogler()">
+          <span class="material-symbols-outlined"> close </span>
+        </button>
+      </div>
     </nav>
     <!-- end Navbar -->
 
     <!-- header -->
     <div class="header">
       <div class="header-text">
-        <div class="wrapper">
+        <div class="hero-wrapper">
           <h2>SMA NEGERI 1 CIKANCUNG</h2>
           <h1>
             Growing Leaders <br />

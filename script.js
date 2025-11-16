@@ -1,21 +1,27 @@
-const navbar = document.querySelector(".navbar-bottom");
-const contentKesiswaan = document.querySelector(".contentKesiswaan");
+// varriable
 
-document.addEventListener("scroll", () => {
+const navbar = document.querySelector(".navbar-bottom");
+const kesiswaanBtn = document.querySelector(".kesiswaan-btn");
+const navbarBtn = document.querySelector(".btnUpKesiswaan");
+const sideBar = document.querySelector(".small-screen");
+
+window.addEventListener("scroll", () => {
   if (window.scrollY > 0) {
     navbar.classList.add("scrolled");
-    contentKesiswaan.classList.add("scrolled");
+    kesiswaanBtn.classList.add("scrolled");
+    navbarBtn.classList.add("scrolled");
   } else {
     navbar.classList.remove("scrolled");
-    contentKesiswaan.classList.remove("scrolled");
+    kesiswaanBtn.classList.remove("scrolled");
+    navbarBtn.classList.remove("scrolled");
   }
-  // dropdown dari contentKesiswaan, otomatis ke tutup jika aktif dan scroll
-  if (contentKesiswaan.classList.contains("actived")) {
-    contentKesiswaan.classList.remove("actived");
-  }
+  document.querySelectorAll("[popover]").forEach((p) => {
+    if (p.matches(":popover-open")) {
+      p.hidePopover(); // ini API bawaan HTML
+    }
+  });
 });
 
-function dropdownKesiswaan() {
-  event.preventDefault();
-  contentKesiswaan.classList.toggle("actived");
+function sideBarToogler() {
+  sideBar.classList.toggle("active");
 }
