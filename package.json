@@ -1,0 +1,23 @@
+{
+  "name": "website-smancik",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eRv4n/SMAN-1-CIKANCUNG.git"
+  },
+  "author": "eRv4n",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eRv4n/SMAN-1-CIKANCUNG/issues"
+  },
+  "homepage": "https://github.com/eRv4n/SMAN-1-CIKANCUNG#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.17"
+  }
+}
