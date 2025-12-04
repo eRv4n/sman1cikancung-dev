@@ -4,7 +4,9 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -17,8 +19,11 @@
   },
   "homepage": "https://github.com/eRv4n/SMAN-1-CIKANCUNG#readme",
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.17",
-    "animejs": "^4.2.2",
-    "tailwindcss": "^4.1.17"
+    "animejs": "^4.2.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.17",
+    "tailwindcss": "^4.1.17",
+    "vite": "^7.2.4"
   }
 }

@@ -36,3 +36,34 @@ body {
 .nav-inactive {
   @apply text-gray-700 font-normal;
 }
+
+.lazy-img {
+  opacity: 0;
+  filter: blur(6px);
+  transition: opacity 0.6s ease, filter 0.6s ease;
+}
+
+.lazy-img.loaded {
+  opacity: 1;
+  filter: blur(0);
+}
+
+#visi-text {
+  display: inline-block;
+  position: relative;
+}
+
+#visi-text::after {
+  content: "|";
+  position: absolute;
+  right: -6px;
+  animation: blink 0.7s infinite;
+  opacity: 1;
+  @apply text-cyan-600;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

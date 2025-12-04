@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMA Negeri 1 Cikancung</title>
+    <link rel="icon" type="image/webp" href="src/assets/images/logo.webp" />
+    <link href="/src/input.css" rel="stylesheet" />
+    <!-- icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="fixed w-dvw h-[60px] flex justify-center items-center transition-all duration-300 z-5 bg-linear-to-b from-gray-800/50 to-transparent"
+    >
+      <div class="container mx-auto h-full flex items-center justify-between px-4">
+        <!-- title -->
+        <a href="#beranda" class="flex items-center gap-2 transition ease-in-out hover:opacity-50">
+          <img
+            src="src/assets/images/logo.webp"
+            alt="Logo SMA Negeri 1 Cikancung"
+            class="h-10 w-auto transition"
+          />
+          <h1 class="text-gray-50 font-semibold text-xl max-lg:text-lg" id="tittle-text">
+            SMA Negeri 1 Cikancung
+          </h1>
+        </a>
+        <!-- title end -->
+        <!-- Desktop -->
+        <ul class="hidden lg:flex items-center gap-6 text-gray-50" id="nav-link">
+          <li><a href="#beranda" class="nav-link nav-active">Beranda</a></li>
+          <li><a href="#spmb" class="nav-link">SPMB 2026</a></li>
+          <li><a href="#tentang-sekolah" class="nav-link">Tentang Sekolah</a></li>
+          <!-- Kesiswaan (dropdown) -->
+          <li class="relative group">
+            <button id="kesiswaanBtn" class="flex items-center gap-1 cursor-pointer nav-link">
+              Kesiswaan <span class="text-[10px]">▼</span>
+            </button>
+            <div
+              id="kesiswaanMenu"
+              class="absolute top-[180%] left-1/2 -translate-x-1/2 mt-2 hidden bg-gray-50/30 text-gray-50 group-hover:block border border-gray-300 backdrop-blur-sm py-2 rounded"
+            >
+              <a href="#" class="kesiswaan-content">OSIS</a>
+              <a href="#" class="kesiswaan-content">MPK</a>
+              <a href="#" class="kesiswaan-content">Ekstrakurikuler</a>
+            </div>
+          </li>
+          <li><a href="#berita" class="nav-link">Berita</a></li>
+          <li><a href="#footer" class="nav-link">Kontak</a></li>
+          <li>
+            <a href="https://simt.kemdikbud.go.id/detail-prestasi-sekolah?npsn=20227904" class="nav-link"
+              >Puspresnas</a
+            >
+          </li>
+        </ul>
+        <!-- Desktop end -->
+        <!-- Hamburger Button -->
+        <button id="hamburger" class="lg:hidden flex flex-col gap-1 cursor-pointer">
+          <span
+            class="block w-6 h-[3px] bg-black transition-all duration-300 origin-center"
+            id="line1"
+          ></span>
+          <span class="block w-6 h-[3px] bg-black transition-all duration-300" id="line2"></span>
+          <span
+            class="block w-6 h-[3px] bg-black transition-all duration-300 origin-center"
+            id="line3"
+          ></span>
+        </button>
+      </div>
+      <!-- Hamburger Button end -->
+    </nav>
+
+    <!-- Mobile -->
+    <div
+      id="mobileMenu"
+      class="lg:hidden bg-gray-50 p-4 fixed top-[60px] right-0 h-full w-1/2 translate-x-full ease-in-out duration-300 transition-all z-5 border border-gray-300"
+    >
+      <a href="#beranda" class="nav-mobile-link">Beranda</a>
+      <a href="#spmb" class="nav-mobile-link">SPMB 2026</a>
+      <a href="#tentang-sekolah" class="nav-mobile-link">Tentang Sekolah</a>
+      <!-- Kesiswaan versi mobile -->
+      <p class="py-1 pl-3 text-lg font-semibold">Kesiswaan</p>
+      <div class="pl-4">
+        <a href="#" class="nav-mobile-link">OSIS</a>
+        <a href="#" class="nav-mobile-link">MPK</a>
+        <a href="#" class="nav-mobile-link">Ekstrakurikuler</a>
+      </div>
+      <a href="#" class="nav-mobile-link">Berita</a>
+      <a href="#" class="nav-mobile-link">Kontak</a>
+      <a href="https://simt.kemdikbud.go.id/detail-prestasi-sekolah?npsn=20227904" class="nav-mobile-link"
+        >Puspresnas</a
+      >
+    </div>
+    <!-- Mobile end -->
+    <!-- Navbar end -->
+
+    <!-- Hero -->
+    <section
+      class="relative h-[130dvh] w-full bg-bottom-left bg-cover bg-no-repeat z-1"
+      style="background-image: url(src/assets/images/Hero.jpg)"
+      id="beranda"
+    >
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-gray-800/70"></div>
+      <!-- Content -->
+      <div class="relative z-2 h-[90dvh] flex flex-col justify-center text-gray-50 px-4 top-[60px]">
+        <div class="container mx-auto px-4">
+          <h1 class="text-4xl/10 md:text-6xl/18 font-semibold mb-4">Membentuk Generasi <br />Berprestasi</h1>
+          <p class="text-base md:text-lg max-w-2xl">
+            SMA Negeri 1 Cikancung berkomitmen menciptakan lingkungan belajar yang disiplin, berkarakter, dan
+            berorientasi prestasi. Melalui pembinaan akademik, pengembangan bakat, serta kegiatan positif di
+            sekolah, kami mendukung setiap siswa untuk tumbuh menjadi pribadi yang unggul dan siap bersaing di
+            masa depan.
+          </p>
+          <div class="mt-6 flex gap-4">
+            <a
+              href="#spmb"
+              class="px-6 py-3 bg-cyan-600 hover:bg-cyan-700 transition rounded-lg text-gray-50 font-semibold"
+            >
+              Lihat Hasil SPMB
+            </a>
+            <a
+              href="#"
+              class="px-6 py-3 bg-none text-gray-50 hover:bg-gray-50 hover:text-cyan-700 border-2 border-white transition duration-300 rounded-lg font-semibold"
+            >
+              Kontak Kami
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero end -->
+
+    <!-- SPMB -->
+    <section id="spmb" class="min-h-dvh w-ful h-dvh flex items-center md:px-4 relative">
+      <div class="max-w-8xl w-full -translate-y-[7%] z-2">
+        <!-- STATISTIK DI ATAS -->
+        <div
+          id="spmb-statistik-atas"
+          class="flex flex-col justify-center gap-6 bg-gray-50 rounded-lg shadow-md opacity-0 -translate-y-[15%]"
+        >
+          <!-- -translate-y-[14%] -->
+          <div class="grid grid-cols-3 gap-4 my-8">
+            <div class="p-4 flex justify-center items-center gap-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1"
+                stroke="currentColor"
+                class="size-11 text-cyan-600"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"
+                />
+              </svg>
+
+              <div class="flex flex-col">
+                <div class="flex gap-1">
+                  <h2 id="alumni" class="text-3xl font-bold text-cyan-600">0</h2>
+                  <span class="text-3xl text-cyan-600 font-bold">+</span>
+                </div>
+                <p class="text-gray-400 text-sm ml-1 font-semibold">Alumni</p>
+              </div>
+            </div>
+            <div class="p-4 flex justify-center items-center gap-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.2"
+                stroke="currentColor"
+                class="size-11 text-cyan-600"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                />
+              </svg>
+              <div class="flex flex-col">
+                <h2 id="siswa" class="text-3xl font-bold text-cyan-600">0</h2>
+                <p class="text-gray-600 text-sm ml-1 font-semibold">Siswa</p>
+              </div>
+            </div>
+            <div class="p-4 flex justify-center items-center gap-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.1"
+                stroke="currentColor"
+                class="size-11 text-cyan-600"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0"
+                />
+              </svg>
+              <div class="flex flex-col">
+                <h2 id="prestasi" class="text-3xl font-bold text-cyan-600">0</h2>
+                <p class="text-gray-600 text-sm font-semibold">Prestasi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- content -->
+        <div
+          id="spmb-content"
+          class="flex flex-col md:flex-row items-center bg-linear-to-b from-cyan-600 to-cyan-700 rounded-lg h-[85vh] shadow-md opacity-0"
+        >
+          <!-- LEFT: IMAGE -->
+          <div class="flex-1 hidden lg:flex justify-center order-1 md:order-0 h-full">
+            <img
+              data-src="src/assets/images/LingkunganSekolah.jpg"
+              alt="Foto Sekolah"
+              class="w-full object-cover rounded-l-lg"
+            />
+          </div>
+
+          <!-- RIGHT: TEXT -->
+          <div class="flex-1 p-8">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-50 leading-tight mb-10">
+              Sistem Penerimaan Murid Baru (SPMB)
+            </h1>
+            <p class="text-gray-200 mt-3 text-lg mb-10">
+              Info Penerimaan Murid baru SMA Negeri 1 Cikancung Silakan bisa diakses melalui tombol berikut.
+            </p>
+            <a
+              href="https://formdaftarulangsmancik.my.canva.site/dagrr22dvio"
+              class="px-6 py-3 bg-none text-cyan-600 bg-gray-50 hover:bg-gray-300 hover:text-cyan-700 transition duration-300 rounded-lg font-semibold"
+            >
+              Lihat hasil SPMB 2026
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SPMB end -->
+
+    <!-- Tentang Sekolah -->
+    <div id="tentang-sekolah">
+      <!-- Profil -->
+      <section id="profil-sekolah" class="pt-[60px] pb-[25px] opacity-0">
+        <div
+          class="h-[80dvh] w-full flex flex-col md:flex-row bg-center bg-cover relative"
+          style="background-image: url(src/assets/images/Banner.png)"
+        >
+          <div class="w-full md:w-[30vw] flex flex-col justify-center pl-8 text-gray-50">
+            <h1 class="text-base md:text-xl font-bold mt-5 md:mt-0 -mb-1 text-yellow-300">
+              SMA NEGERI 1 CIKANCUNG
+            </h1>
+            <h1
+              id="profil-sekolah-text"
+              class="text-2xl md:text-4xl font-bold relative after:content-['_'] after:opacity-0 after:inline-block"
+            >
+              PROFIL SEKOLAH
+            </h1>
+          </div>
+          <div class="w-full md:w-[70vw] flex flex-col justify-center p-8 text-gray-50 space-y-6">
+            <p class="text-sm md:text-lg">
+              SMA Negeri 1 Cikancung terletak di Jalan Jayadikarta No. 57 Kampung Manabaya Desa Cihanyir
+              Kabupaten Bandung. Sekolah ini berjarak sekitar 2,3 km dari pusat kecamatan dan 38 km dari pusat
+              pemerintahan daerah. Akses menuju sekolah dapat ditempuh melalui trayek angkutan
+              Cicalengka–Cijapati, meskipun kondisi jalan dari arah Kecamatan Cikancung menuju lokasi masih
+              tergolong rusak ringan.
+            </p>
+            <p class="text-sm md:text-lg">
+              Lingkungan sekitar sekolah memiliki tradisi sosial yang kuat, ditandai dengan banyaknya
+              pesantren tradisional dan semangat gotong royong yang masih terpelihara. Mata pencaharian
+              penduduk setempat beragam; sebagian besar bekerja sebagai buruh dan sebagian lainnya bergerak di
+              sektor pertanian. Kondisi ekonomi tersebut berpengaruh pada partisipasi pendidikan
+              lanjut—proporsi peserta didik yang melanjutkan ke jenjang SMA dan perguruan tinggi masih relatif
+              rendah.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Profil end -->
+
+      <!-- Mini Information -->
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center pb-8 px-7">
+        <!-- kurikulum -->
+        <a
+          id="kurikulum"
+          class="rounded-lg shadow-md border border-gray-300 h-56 flex justify-center items-center bg-white transition hover:scale-95 opacity-0"
+          href="https://id.wikipedia.org/wiki/Kurikulum_Merdeka"
+        >
+          <img
+            data-src="src/assets/images/Kurikulum_Merdeka.png"
+            class="w-full h-full object-contain p-4"
+            alt="Kurikulum Merdeka"
+          />
+        </a>
+
+        <!-- akreditasi -->
+        <a
+          id="akreditasi"
+          class="bg-white rounded-lg shadow-md border border-gray-300 flex justify-center items-center h-56 transition hover:scale-95 opacity-0"
+          href="https://ban-pdm.id/satuanpendidikan/20227904"
+        >
+          <img
+            data-src="src/assets/images/pngtree-school-accreditation-a-badge-vector-png-image_16036446.png"
+            alt="Akreditasi"
+            class="w-full h-full object-contain p-4"
+          />
+        </a>
+
+        <!-- tahun berdiri -->
+        <a
+          id="tahunBerdiri"
+          class="bg-white rounded-lg shadow-md border border-gray-300 flex flex-col justify-center items-center h-56 transition hover:scale-95 opacity-0"
+          href="#tentang-sekolah"
+        >
+          <h1 class="font-black text-xl lg:text-3xl -mb-2 text-cyan-800">BERDIRI SEJAK</h1>
+          <h2 class="font-black text-6xl lg:text-8xl mb-2 text-cyan-800">2003</h2>
+          <!-- <h1 class="font-black text-sm md:text-xl lg:text-3xl -mb-2 text-cyan-800">BERDIRI SEJAK</h1>
+          <h2 class="font-black text-4xl md:text-6xl lg:text-8xl mb-2 text-cyan-800">2003</h2> -->
+        </a>
+      </section>
+      <!-- Mini Information end -->
+
+      <!-- Salam dari Kepala Sekolah -->
+      <section id="sambutan" class="w-full py-20 px-6">
+        <div class="max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-10 gap-8 items-center">
+          <!-- FOTO (3/10) -->
+          <div
+            class="md:col-span-3 flex justify-center bg-white border-gray-300 border rounded-lg p-2 opacity-0"
+            id="fotoKepsek"
+          >
+            <img
+              data-src="https://media.istockphoto.com/id/1388648617/photo/confident-caucasian-young-man-in-casual-denim-clothes-with-arms-crossed-looking-at-camera.jpg?s=612x612&w=0&k=20&c=YxctPklAOJMmy6Tolyvn45rJL3puk5RlKt39FO46ZeA="
+              alt="Kepala Sekolah"
+              class="w-full max-w-sm h-90 rounded-md object-cover"
+            />
+          </div>
+
+          <!-- TEKS (7/10) -->
+          <div class="md:col-span-7">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 text-cyan-900 opacity-0" id="judulKepsek">
+              Sambutan Kepala Sekolah
+            </h2>
+
+            <p class="text-gray-700 leading-relaxed mb-6 opacity-0" id="contentKepsek">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quas officiis fuga cum magnam,
+              provident delectus porro quod, tenetur beatae alias possimus laboriosam perferendis eos natus
+              dolores maiores maxime asperiores! Laborum autem aspernatur facere libero in, non voluptatum
+              natus itaque. Omnis, amet. Maxime molestiae reprehenderit non ratione, eum nemo dolorum
+              voluptate repellendus! Provident numquam impedit autem itaque quae sit voluptatibus. Dignissimos
+              aliquam placeat ex at dicta cupiditate amet odio quod vel facilis quia explicabo eveniet est
+              veniam perferendis molestiae consectetur, nam ea, similique impedit modi! Provident voluptates
+              nulla officia natus. Veniam, vitae? Eaque, dolorum. Autem commodi magni porro explicabo ut modi
+              unde aspernatur maiores esse animi. Neque, dolorem non? Quo velit natus laborum debitis libero
+              quaerat explicabo sapiente sit porro.
+            </p>
+
+            <h3 class="text-xl font-semibold text-gray-800 opacity-0" id="gelarKepsek">
+              Dr. Drs. Ir. H. Contoh, SH, ST, MT, M.Si, MH, M.Pd, STMNI, C.MARCOM, M.B.A
+            </h3>
+            <h4 class="text-gray-500 opacity-0" id="namaJabatan">Kepala Sekolah SMA Negeri 1 Cikancung</h4>
+          </div>
+        </div>
+      </section>
+
+      <!-- Salam dari Kepala Sekolah end -->
+
+      <!-- VISI MISI -->
+      <section class="px-6 pb-40">
+        <div class="max-w-8xl mx-auto bg-white shadow-md rounded-lg p-10 border border-gray-300">
+          <!-- Visi -->
+          <div class="mb-16" id="visi-section">
+            <!-- Header Section -->
+            <div class="flex items-center space-x-4 mb-6">
+              <h2
+                id="visi-title"
+                class="text-5xl font-extrabold tracking-wide font-playfair italic text-cyan-800 opacity-0"
+              >
+                Visi
+              </h2>
+            </div>
+            <!-- Content -->
+            <div class="flex gap-3">
+              <div class="w-[0.3rem] h-10 bg-cyan-900 rounded-full"></div>
+              <p
+                id="visi-text"
+                class="text-gray-700 md:text-2xl text-xl font-medium leading-relaxed md:col-span-2"
+              >
+                <span class="text-cyan-900">"</span>Cerdas, Terampil, Prestasi, Mandiri Berbasis Karakter
+                Bangsa.<span class="text-cyan-900">"</span>
+              </p>
+            </div>
+          </div>
+          <!-- Visi end -->
+          <!-- Misi -->
+          <div id="misi-section">
+            <!-- Header Section -->
+            <div class="flex items-center space-x-4 mb-6">
+              <h2
+                id="misi-title"
+                class="text-5xl font-extrabold tracking-wide font-playfair italic text-cyan-900 opacity-0"
+              >
+                Misi
+              </h2>
+            </div>
+            <!-- Content -->
+            <div id="misi-list" class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-10">
+              <!-- LEFT COLUMN -->
+              <div class="flex flex-col gap-5 opacity-0">
+                <div class="flex items-start space-x-4">
+                  <span
+                    class="flex items-center justify-center w-8 h-8 bg-cyan-900 text-white font-bold rounded-full shrink-0"
+                    >01</span
+                  >
+                  <p class="text-gray-700 leading-relaxed">Meningkatkan profesionalisme guru</p>
+                </div>
+                <div class="flex items-start space-x-4">
+                  <span
+                    class="flex items-center justify-center w-8 h-8 bg-cyan-900 text-white font-bold rounded-full shrink-0"
+                    >02</span
+                  >
+                  <p class="text-gray-700 leading-relaxed">
+                    Meningkatkan kecerdasan fikiran, emosional, dan spiritual untuk seluruh warga sekolah
+                  </p>
+                </div>
+                <div class="flex items-start space-x-4">
+                  <span
+                    class="flex items-center justify-center w-8 h-8 bg-cyan-900 text-white font-bold rounded-full shrink-0"
+                    >03</span
+                  >
+                  <p class="text-gray-700 leading-relaxed">
+                    Menumbuhkan budaya membaca dan menulis (intelektual)
+                  </p>
+                </div>
+                <div class="flex items-start space-x-4">
+                  <span
+                    class="flex items-center justify-center w-8 h-8 bg-cyan-900 text-white font-bold rounded-full shrink-0"
+                    >04</span
+                  >
+                  <p class="text-gray-700 leading-relaxed">
+                    Mengembangkan kepedulian terhadap sesama warga sekolah (emosional)
+                  </p>
+                </div>
+                <div class="flex items-start space-x-4">
+                  <span
+                    class="flex items-center justify-center w-8 h-8 bg-cyan-900 text-white font-bold rounded-full shrink-0"
+                    >05</span
+                  >
+                  <p class="text-gray-700 leading-relaxed">
+                    Meningkatkan pemanfaatan media dan sumber pembelajaran (intelektual)
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-5">
+                <div class="flex items-start space-x-4">
+                  <span
+                    class="flex items-center justify-center w-8 h-8 bg-cyan-900 text-white font-bold rounded-full shrink-0"
+                    >06</span
+                  >
+                  <p class="text-gray-700 leading-relaxed">Meningkatkan pembinaan keagamaan warga sekolah</p>
+                </div>
+                <div class="flex items-start space-x-4">
+                  <span
+                    class="flex items-center justify-center w-8 h-8 bg-cyan-900 text-white font-bold rounded-full shrink-0"
+                    >07</span
+                  >
+                  <p class="text-gray-700 leading-relaxed">
+                    Menciptakan kreatifitas seni dan olahraga baik di sekolah dan luar sekolah
+                  </p>
+                </div>
+                <div class="flex items-start space-x-4">
+                  <span
+                    class="flex items-center justify-center w-8 h-8 bg-cyan-900 text-white font-bold rounded-full shrink-0"
+                    >08</span
+                  >
+                  <p class="text-gray-700 leading-relaxed">
+                    Memaksimalkan potensi siswa bidang akademik dan non akademik
+                  </p>
+                </div>
+                <div class="flex items-start space-x-4">
+                  <span
+                    class="flex items-center justify-center w-8 h-8 bg-cyan-900 text-white font-bold rounded-full shrink-0"
+                    >09</span
+                  >
+                  <p class="text-gray-700 leading-relaxed">
+                    Meningkatkan prestasi siswa dalam akademik dan non akademik
+                  </p>
+                </div>
+                <div class="flex items-start space-x-4">
+                  <span
+                    class="flex items-center justify-center w-8 h-8 bg-cyan-900 text-white font-bold rounded-full shrink-0"
+                    >10</span
+                  >
+                  <p class="text-gray-700 leading-relaxed">Menumbuhkan jiwa kewirausahaan (mandiri)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Misi end -->
+        </div>
+      </section>
+      <!-- VISI MISI end -->
+    </div>
+
+    <!-- Berita -->
+    <section class="w-full bg-cyan-600 py-14 px-6 relative overflow-hidden">
+      <div class="relative z-2 max-w-6xl mx-auto text-center">
+        <h2 class="text-white text-5xl md:text-6xl font-semibold font-playfair italic">Berita & Kalendar</h2>
+      </div>
+    </section>
+
+    <section id="beritaWrapper">
+      <section id="berita" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-6 px-8"></section>
+    </section>
+
+    <!-- Load More -->
+    <div class="w-full flex justify-center mt-6">
+      <button
+        id="loadMoreBtn"
+        class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition hidden"
+      >
+        Load More
+      </button>
+    </div>
+
+    <!-- Berita end -->
+
+    <footer class="bg-cyan-700 text-white py-10 mt-10">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Brand -->
+          <div>
+            <h2 class="text-2xl font-bold tracking-wide">SMAN 1 Cikancung</h2>
+            <p class="text-gray-200 mt-2">Cerdas • Terampil • Prestasi • Mandiri</p>
+          </div>
+
+          <!-- Social Media -->
+          <div class="md:col-span-2 flex items-center md:justify-end gap-6">
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/sman.cikancung"
+              target="_blank"
+              class="hover:text-gray-200 transition text-3xl"
+            >
+              <i class="ri-instagram-fill"></i>
+            </a>
+
+            <!-- YouTube -->
+            <a
+              href="https://www.youtube.com/@SMAN1Cikancung"
+              target="_blank"
+              class="hover:text-gray-200 transition text-3xl"
+            >
+              <i class="ri-youtube-fill"></i>
+            </a>
+
+            <!-- TikTok -->
+            <a
+              href="https://www.tiktok.com/@sman1cikancung"
+              target="_blank"
+              class="hover:text-gray-200 transition text-3xl"
+            >
+              <i class="ri-tiktok-fill"></i>
+            </a>
+
+            <!-- Facebook -->
+            <a
+              href="https://www.facebook.com/Smanckc1/?locale=id_ID"
+              target="_blank"
+              class="hover:text-gray-200 transition text-3xl"
+            >
+              <i class="ri-facebook-fill"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="border-t border-white/40 mt-8 pt-6 text-center">
+          <p class="text-gray-100 text-sm">
+            © <span id="year"></span> SMAN 1 Cikancung — All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="/js/ui.js"></script>
+  <script src="/js/lazyLoad.js"></script>
+  <!-- module -->
+  <script type="module" src="/js/api/berita.js"></script>
+  <script type="module" src="/js/anime.js"></script>
+</html>
